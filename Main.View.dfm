@@ -21,15 +21,13 @@ object mainView: TmainView
     Align = alRight
     Caption = 'Clientes'
     TabOrder = 0
-    ExplicitLeft = 417
-    ExplicitHeight = 340
     object lbl1: TLabel
       Left = 16
       Top = 48
       Width = 8
       Height = 13
       Caption = 'id'
-      FocusControl = cxDBSpinEdit1
+      FocusControl = dbedtid1
     end
     object lbl2: TLabel
       Left = 16
@@ -37,7 +35,7 @@ object mainView: TmainView
       Width = 26
       Height = 13
       Caption = 'nome'
-      FocusControl = cxDBMemo1
+      FocusControl = dbmmonome1
     end
     object lbl3: TLabel
       Left = 16
@@ -45,7 +43,7 @@ object mainView: TmainView
       Width = 24
       Height = 13
       Caption = 'email'
-      FocusControl = cxDBMemo2
+      FocusControl = dbmmoemail
     end
     object lbl4: TLabel
       Left = 216
@@ -53,7 +51,7 @@ object mainView: TmainView
       Width = 40
       Height = 13
       Caption = 'telefone'
-      FocusControl = cxDBMemo3
+      FocusControl = dbmmotelefone
     end
     object dbnvgr2: TDBNavigator
       Left = 2
@@ -63,44 +61,42 @@ object mainView: TmainView
       DataSource = dsClientes
       Align = alTop
       TabOrder = 0
-      ExplicitLeft = 4
-      ExplicitTop = 23
-      ExplicitWidth = 318
     end
-    object cxDBSpinEdit1: TcxDBSpinEdit
+    object dbedtid1: TDBEdit
       Left = 16
       Top = 64
-      DataBinding.DataField = 'id'
-      DataBinding.DataSource = dsClientes
-      TabOrder = 1
       Width = 121
+      Height = 21
+      DataField = 'id'
+      DataSource = dsClientes
+      TabOrder = 1
     end
-    object cxDBMemo1: TcxDBMemo
+    object dbmmonome1: TDBMemo
       Left = 16
       Top = 104
-      DataBinding.DataField = 'nome'
-      DataBinding.DataSource = dsClientes
-      TabOrder = 2
-      Height = 21
       Width = 185
+      Height = 21
+      DataField = 'nome'
+      DataSource = dsClientes
+      TabOrder = 2
     end
-    object cxDBMemo2: TcxDBMemo
+    object dbmmoemail: TDBMemo
       Left = 16
       Top = 148
-      DataBinding.DataField = 'email'
-      DataBinding.DataSource = dsClientes
-      TabOrder = 3
-      Height = 21
       Width = 185
+      Height = 21
+      DataField = 'email'
+      DataSource = dsClientes
+      TabOrder = 3
     end
-    object cxDBMemo3: TcxDBMemo
+    object dbmmotelefone: TDBMemo
       Left = 216
       Top = 148
-      DataBinding.DataField = 'telefone'
-      DataBinding.DataSource = dsClientes
-      TabOrder = 4
-      Height = 21
       Width = 185
+      Height = 21
+      DataField = 'telefone'
+      DataSource = dsClientes
+      TabOrder = 4
     end
     object dbgrd2: TDBGrid
       Left = 2
@@ -149,9 +145,6 @@ object mainView: TmainView
     Height = 41
     Align = alTop
     TabOrder = 1
-    ExplicitLeft = 272
-    ExplicitTop = 113
-    ExplicitWidth = 185
     object btnConnect: TButton
       Left = 1
       Top = 1
@@ -161,8 +154,6 @@ object mainView: TmainView
       Caption = 'Connect'
       TabOrder = 0
       OnClick = btnConnectClick
-      ExplicitLeft = 2
-      ExplicitTop = -4
     end
   end
   object grp2: TGroupBox
@@ -173,16 +164,13 @@ object mainView: TmainView
     Align = alLeft
     Caption = 'Produtos'
     TabOrder = 2
-    ExplicitLeft = 7
-    ExplicitTop = 46
-    ExplicitHeight = 608
     object lbl5: TLabel
       Left = 16
       Top = 48
       Width = 8
       Height = 13
       Caption = 'id'
-      FocusControl = cxDBSpinEdit2
+      FocusControl = dbedtid
     end
     object lbl6: TLabel
       Left = 16
@@ -190,7 +178,7 @@ object mainView: TmainView
       Width = 31
       Height = 13
       Caption = 'codigo'
-      FocusControl = cxDBSpinEdit3
+      FocusControl = dbedtcodigo
     end
     object lbl7: TLabel
       Left = 16
@@ -198,7 +186,7 @@ object mainView: TmainView
       Width = 26
       Height = 13
       Caption = 'nome'
-      FocusControl = cxDBMemo4
+      FocusControl = dbmmonome
     end
     object lbl8: TLabel
       Left = 216
@@ -206,7 +194,7 @@ object mainView: TmainView
       Width = 24
       Height = 13
       Caption = 'valor'
-      FocusControl = cxDBCalcEdit1
+      FocusControl = dbedtvalor
     end
     object dbnvgr1: TDBNavigator
       Left = 2
@@ -216,42 +204,42 @@ object mainView: TmainView
       DataSource = dsProdutos
       Align = alTop
       TabOrder = 0
-      ExplicitLeft = 4
-      ExplicitTop = 23
-      ExplicitWidth = 317
     end
-    object cxDBSpinEdit2: TcxDBSpinEdit
+    object dbedtid: TDBEdit
       Left = 16
       Top = 64
-      DataBinding.DataField = 'id'
-      DataBinding.DataSource = dsProdutos
-      TabOrder = 1
       Width = 121
+      Height = 21
+      DataField = 'id'
+      DataSource = dsProdutos
+      TabOrder = 1
     end
-    object cxDBSpinEdit3: TcxDBSpinEdit
+    object dbedtcodigo: TDBEdit
       Left = 16
       Top = 104
-      DataBinding.DataField = 'codigo'
-      DataBinding.DataSource = dsProdutos
-      TabOrder = 2
       Width = 121
+      Height = 21
+      DataField = 'codigo'
+      DataSource = dsProdutos
+      TabOrder = 2
     end
-    object cxDBMemo4: TcxDBMemo
+    object dbmmonome: TDBMemo
       Left = 16
       Top = 148
-      DataBinding.DataField = 'nome'
-      DataBinding.DataSource = dsProdutos
-      TabOrder = 3
-      Height = 21
       Width = 185
+      Height = 21
+      DataField = 'nome'
+      DataSource = dsProdutos
+      TabOrder = 3
     end
-    object cxDBCalcEdit1: TcxDBCalcEdit
+    object dbedtvalor: TDBEdit
       Left = 216
       Top = 148
-      DataBinding.DataField = 'valor'
-      DataBinding.DataSource = dsProdutos
-      TabOrder = 4
       Width = 121
+      Height = 21
+      DataField = 'valor'
+      DataSource = dsProdutos
+      TabOrder = 4
     end
     object dbgrd1: TDBGrid
       Left = 2

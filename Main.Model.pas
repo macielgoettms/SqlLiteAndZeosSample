@@ -27,6 +27,9 @@ type
       DisplayText: Boolean);
     procedure TableClientetelefoneGetText(Sender: TField; var Text: string;
       DisplayText: Boolean);
+    procedure DataModuleCreate(Sender: TObject);
+    procedure TableProdutonomeGetText(Sender: TField; var Text: string;
+      DisplayText: Boolean);
   private
     { Private declarations }
   public
@@ -41,6 +44,11 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+procedure TmainModel.DataModuleCreate(Sender: TObject);
+begin
+  //ZConnection.Database := ExtractFilePath(ParamStr(0))  +'\DataBase\db.sqlite';
+end;
 
 procedure TmainModel.TableClienteemailGetText(Sender: TField; var Text: string;
   DisplayText: Boolean);
@@ -58,6 +66,12 @@ procedure TmainModel.TableClientetelefoneGetText(Sender: TField;
   var Text: string; DisplayText: Boolean);
 begin
   Text := TableClientetelefone.AsString;
+end;
+
+procedure TmainModel.TableProdutonomeGetText(Sender: TField; var Text: string;
+  DisplayText: Boolean);
+begin
+  Text := TableProdutonome.AsString;
 end;
 
 end.

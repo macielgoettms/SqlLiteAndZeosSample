@@ -5,9 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.DBCtrls,
-  Data.DB, Vcl.Grids, Vcl.DBGrids, cxGraphics, cxControls, cxLookAndFeels,
-  cxLookAndFeelPainters, cxContainer, cxEdit, cxDropDownEdit, cxCalc, cxDBEdit,
-  cxMemo, cxTextEdit, cxMaskEdit, cxSpinEdit;
+  Data.DB, Vcl.Grids, Vcl.DBGrids, Vcl.Mask;
 
 type
   TmainView = class(TForm)
@@ -20,21 +18,21 @@ type
     dsClientes: TDataSource;
     dsProdutos: TDataSource;
     lbl1: TLabel;
-    cxDBSpinEdit1: TcxDBSpinEdit;
+    dbedtid1: TDBEdit;
     lbl2: TLabel;
-    cxDBMemo1: TcxDBMemo;
+    dbmmonome1: TDBMemo;
     lbl3: TLabel;
-    cxDBMemo2: TcxDBMemo;
+    dbmmoemail: TDBMemo;
     lbl4: TLabel;
-    cxDBMemo3: TcxDBMemo;
+    dbmmotelefone: TDBMemo;
     lbl5: TLabel;
-    cxDBSpinEdit2: TcxDBSpinEdit;
+    dbedtid: TDBEdit;
     lbl6: TLabel;
-    cxDBSpinEdit3: TcxDBSpinEdit;
+    dbedtcodigo: TDBEdit;
     lbl7: TLabel;
-    cxDBMemo4: TcxDBMemo;
+    dbmmonome: TDBMemo;
     lbl8: TLabel;
-    cxDBCalcEdit1: TcxDBCalcEdit;
+    dbedtvalor: TDBEdit;
     dbgrd1: TDBGrid;
     dbgrd2: TDBGrid;
     procedure btnConnectClick(Sender: TObject);

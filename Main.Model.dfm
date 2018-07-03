@@ -1,5 +1,6 @@
 object mainModel: TmainModel
   OldCreateOrder = False
+  OnCreate = DataModuleCreate
   Height = 213
   Width = 215
   object ZConnection: TZConnection
@@ -10,7 +11,7 @@ object mainModel: TmainModel
     TransactIsolationLevel = tiReadCommitted
     HostName = ''
     Port = 0
-    Database = 'D:\Projetos\Outros\SqlLiteAndZeosSample\DataBase\db.sqlite'
+    Database = 'D:\Projetos\Delphi\SqlLiteAndZeosSample\DataBase\db.sqlite'
     User = ''
     Password = ''
     Protocol = 'sqlite-3'
@@ -56,6 +57,7 @@ object mainModel: TmainModel
     end
     object TableProdutonome: TWideMemoField
       FieldName = 'nome'
+      OnGetText = TableProdutonomeGetText
       BlobType = ftWideMemo
     end
     object TableProdutovalor: TFloatField
